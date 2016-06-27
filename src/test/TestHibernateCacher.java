@@ -2,12 +2,8 @@ package test;
 
 import dao.StudentDao;
 import domain.Student;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import uitl.HibernateUtil;
-
-import java.util.Iterator;
-import java.util.List;
 
 /**
  * @author roy.zhuo
@@ -27,6 +23,7 @@ public class TestHibernateCacher {
         Student student2 = (Student) session.get(Student.class, 1);
         System.out.println(student2.toString());
         */
+        /*
         //查询所有学生，把对象放入缓存
         String hql = "from Student";
         Query query = session.createQuery(hql);
@@ -40,6 +37,8 @@ public class TestHibernateCacher {
             Student student = (Student) iterator.next();
             System.out.println(student.toString());
         }
+        */
+        //二级缓存
     }
 
     public static void queryStudentByID(Integer id) {
